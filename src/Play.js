@@ -254,7 +254,7 @@ const [progress, setProgress] = useState(0);
         </Row>
         : <Col></Col>
         }
-        Turno di: Turno di: {giocatoreAttivo ? giocatoreAttivo.nome : 'Nessun giocatore attivo'}
+        Turno di: {giocatoreAttivo ? giocatoreAttivo.nome : 'Nessun giocatore attivo'}
         <div>Penalità per chi perde: {puntiDaTogliere}</div>
         <ProgressBar max={tempo} now={progress} label={`${progress}`} />
       <div style={{textAlign:'center'}}>
