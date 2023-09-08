@@ -157,7 +157,6 @@ const [progress, setProgress] = useState(0);
 
         } else {
             setIsRunning(false); // Ferma la progress bar
-            setPuntiDaTogliere(prev => prev + 1);
             return tempo; // Riavvia la progress bar dopo aver raggiunto il 100%
           } 
       });
@@ -168,6 +167,7 @@ const [progress, setProgress] = useState(0);
 
   const correctAnswer = () => {
     aggiungiPunteggio(giocatoreAttivo.id,1)
+    setPuntiDaTogliere(prev => prev + 1);
     setIsRunning(true);
     cambiaIndiceGiocatoreAttivo();
     startProgressBar();
